@@ -1,0 +1,63 @@
+# Ignore ambientes virtuais
+venv/
+ENV/
+env/
+.venv/
+
+# Ignore arquivos de configuração locais
+*.env
+.env
+
+# Ignore dependências instaladas
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Ignore logs e arquivos temporários
+*.log
+*.tmp
+*.swp
+*.bak
+*.old
+
+# Ignore bancos de dados SQLite
+*.sqlite3
+*.db
+
+# Ignore arquivos de cache do Flask
+instance/
+.webassets-cache
+
+# Ignore configurações do editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore arquivos de build do Docker
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.Python
+**/build/
+**/develop-eggs/
+**/dist/
+**/downloads/
+**/eggs/
+**/.eggs/
+**/lib/
+**/lib64/
+**/parts/
+**/sdist/
+**/var/
+**/wheels/
+**/share/python-wheels/
+pip-wheel-metadata/
+
+# Ignore arquivos criados pelo sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini

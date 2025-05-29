@@ -1,0 +1,28 @@
+sion: '3'
+
+services:
+  pessoa_service:
+    build:
+      context: ./pessoa_service
+    ports:
+      - "5001:5000"
+    container_name: pessoa_service
+    networks:
+      - microsservicos
+
+  atividade_service:
+    build:
+      context: ./atividade_service
+    ports:
+      - "5002:5000"
+    container_name: atividade_service
+    environment:
+      - PESSOA_SERVICE_URL=http://pessoa_service:5000/pessoas
+    networks:
+      - microsservicos
+    depends_on:
+      - pessoa_service
+
+networks:
+  microsservicos:
+    driver: bridge
